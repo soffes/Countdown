@@ -7,22 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		217CFEE61B7484CC002794CF /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEE51B7484CC002794CF /* ConfigurationWindowController.swift */; };
+		217CFEE71B7484CC002794CF /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEE51B7484CC002794CF /* ConfigurationWindowController.swift */; };
+		217CFEE91B7484ED002794CF /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217CFEE81B7484ED002794CF /* Configuration.xib */; };
+		217CFEEA1B7484ED002794CF /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217CFEE81B7484ED002794CF /* Configuration.xib */; };
+		217CFEEC1B748573002794CF /* PreviewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEEB1B748573002794CF /* PreviewWindowController.swift */; };
+		217CFEEE1B7486EB002794CF /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEED1B7486EB002794CF /* Preferences.swift */; };
+		217CFEEF1B7486EE002794CF /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEED1B7486EB002794CF /* Preferences.swift */; };
 		21F222351B73B5CD00B9A11A /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F222341B73B5CD00B9A11A /* AgeView.swift */; };
 		21F2223F1B73B60100B9A11A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F2223E1B73B60100B9A11A /* AppDelegate.swift */; };
-		21F222411B73B60100B9A11A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F222401B73B60100B9A11A /* ViewController.swift */; };
 		21F222431B73B60100B9A11A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F222421B73B60100B9A11A /* Images.xcassets */; };
 		21F222461B73B60100B9A11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F222441B73B60100B9A11A /* Main.storyboard */; };
 		21F2225B1B73B64300B9A11A /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F222341B73B5CD00B9A11A /* AgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		217CFEE51B7484CC002794CF /* ConfigurationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationWindowController.swift; sourceTree = "<group>"; };
+		217CFEE81B7484ED002794CF /* Configuration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Configuration.xib; sourceTree = "<group>"; };
+		217CFEEB1B748573002794CF /* PreviewWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewWindowController.swift; sourceTree = "<group>"; };
+		217CFEED1B7486EB002794CF /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		21F222261B73B5AC00B9A11A /* Motivation.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Motivation.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F2222A1B73B5AC00B9A11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21F222341B73B5CD00B9A11A /* AgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
 		21F2223A1B73B60100B9A11A /* Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F2223D1B73B60100B9A11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21F2223E1B73B60100B9A11A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21F222401B73B60100B9A11A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21F222421B73B60100B9A11A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		21F222451B73B60100B9A11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				21F222341B73B5CD00B9A11A /* AgeView.swift */,
+				217CFEE51B7484CC002794CF /* ConfigurationWindowController.swift */,
+				217CFEED1B7486EB002794CF /* Preferences.swift */,
+				217CFEE81B7484ED002794CF /* Configuration.xib */,
 				21F222291B73B5AC00B9A11A /* Supporting Files */,
 			);
 			path = Motivation;
@@ -84,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				21F2223E1B73B60100B9A11A /* AppDelegate.swift */,
-				21F222401B73B60100B9A11A /* ViewController.swift */,
+				217CFEEB1B748573002794CF /* PreviewWindowController.swift */,
 				21F222421B73B60100B9A11A /* Images.xcassets */,
 				21F222441B73B60100B9A11A /* Main.storyboard */,
 				21F2223C1B73B60100B9A11A /* Supporting Files */,
@@ -189,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				217CFEE91B7484ED002794CF /* Configuration.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F222431B73B60100B9A11A /* Images.xcassets in Resources */,
+				217CFEEA1B7484ED002794CF /* Configuration.xib in Resources */,
 				21F222461B73B60100B9A11A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				217CFEE61B7484CC002794CF /* ConfigurationWindowController.swift in Sources */,
 				21F222351B73B5CD00B9A11A /* AgeView.swift in Sources */,
+				217CFEEE1B7486EB002794CF /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F222411B73B60100B9A11A /* ViewController.swift in Sources */,
 				21F2223F1B73B60100B9A11A /* AppDelegate.swift in Sources */,
+				217CFEEC1B748573002794CF /* PreviewWindowController.swift in Sources */,
+				217CFEEF1B7486EE002794CF /* Preferences.swift in Sources */,
+				217CFEE71B7484CC002794CF /* ConfigurationWindowController.swift in Sources */,
 				21F2225B1B73B64300B9A11A /* AgeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -307,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -318,6 +336,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Motivation/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -332,6 +351,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Motivation/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -388,6 +408,7 @@
 				21F222331B73B5AC00B9A11A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21F222531B73B60100B9A11A /* Build configuration list for PBXNativeTarget "Preview" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +417,7 @@
 				21F222551B73B60100B9A11A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

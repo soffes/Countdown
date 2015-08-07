@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ConfigurationWindowController" customModule="Motivation" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="yFe-qJ-2Tx"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="236" height="93"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="-5" width="236" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cf0-hz-k84">
+                        <rect key="frame" x="18" y="56" width="91" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Your Birthday:" id="niJ-ql-s5d">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="24i-HD-fhj">
+                        <rect key="frame" x="115" y="53" width="104" height="27"/>
+                        <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="6zn-zD-imf">
+                            <font key="font" metaFont="system"/>
+                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                                <!--1982-02-12 16:00:00 +0000-->
+                                <timeZone key="timeZone" name="US/Pacific"/>
+                            </calendarDate>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        </datePickerCell>
+                        <connections>
+                            <binding destination="zet-Ww-APq" name="value" keyPath="self.birthday" id="EQq-LN-QTl"/>
+                        </connections>
+                    </datePicker>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nsQ-3M-79j">
+                        <rect key="frame" x="162" y="13" width="60" height="32"/>
+                        <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JAB-GH-sNP">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="close:" target="-2" id="6l5-z1-3YJ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nsQ-3M-79j" firstAttribute="top" secondItem="24i-HD-fhj" secondAttribute="bottom" constant="12" id="FwY-Fh-rMa"/>
+                    <constraint firstItem="cf0-hz-k84" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="Lc1-MC-Y4L"/>
+                    <constraint firstAttribute="bottom" secondItem="nsQ-3M-79j" secondAttribute="bottom" constant="20" id="Lxr-Yx-Nkn"/>
+                    <constraint firstAttribute="trailing" secondItem="24i-HD-fhj" secondAttribute="trailing" constant="20" id="Rgy-r3-dU4"/>
+                    <constraint firstItem="cf0-hz-k84" firstAttribute="centerY" secondItem="24i-HD-fhj" secondAttribute="centerY" id="UWK-Al-Pj5"/>
+                    <constraint firstAttribute="trailing" secondItem="nsQ-3M-79j" secondAttribute="trailing" constant="20" id="Zr4-bI-6AB"/>
+                    <constraint firstItem="cf0-hz-k84" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="cwf-UN-ISQ"/>
+                    <constraint firstItem="24i-HD-fhj" firstAttribute="leading" secondItem="cf0-hz-k84" secondAttribute="trailing" constant="8" id="fa9-Zm-ohY"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="425" y="264.5"/>
+        </window>
+        <customObject id="zet-Ww-APq" customClass="Preferences" customModule="Motivation" customModuleProvider="target"/>
+    </objects>
+</document>

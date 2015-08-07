@@ -25,8 +25,16 @@ class AgeView: ScreenSaverView {
 		return label
 	}()
 
+	lazy var configurationWindowController: NSWindowController = {
+		return ConfigurationWindowController()
+	}()
+
 
 	// MARK: - Initializers
+
+	convenience init() {
+		self.init(frame: CGRectZero, isPreview: false)
+	}
 
 	override init!(frame: NSRect, isPreview: Bool) {
 		super.init(frame: frame, isPreview: isPreview)
@@ -47,18 +55,33 @@ class AgeView: ScreenSaverView {
 		backgroundColor.setFill()
 		NSBezierPath.fillRect(bounds)
 
-		textLabel.font = .systemFontOfSize(bounds.width / 10)
+		if Preferences().birthday != nil {
+			textLabel.font = .systemFontOfSize(bounds.width / 10)
+		} else {
+			textLabel.font = .systemFontOfSize(bounds.width / 30)
+		}
 	}
 
 
 	// MARK: - ScreenSaverView
 
 	override func animateOneFrame() {
-		let birthday = NSDate(timeIntervalSince1970: 605779200)
-		let age = birthday.timeIntervalSinceNow * -1 / 60 / 60 / 24 / 365
-		textLabel.stringValue = String(NSString(format: "%0.9f", age))
+		if let birthday = Preferences().birthday {
+			let age = birthday.timeIntervalSinceNow * -1 / 60 / 60 / 24 / 365
+			textLabel.stringValue = String(NSString(format: "%0.9f", age))
+		} else {
+			textLabel.stringValue = "Open Screen Saver Options to set your birthday."
+		}
 	}
 
+	override func hasConfigureSheet() -> Bool {
+		return true
+	}
+
+	override func configureSheet() -> NSWindow! {
+		return configurationWindowController.window
+	}
+	
 
 	// MARK: - Private
 
