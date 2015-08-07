@@ -6,6 +6,13 @@ Motivation is a Mac OS X screen saver inspired by [Alex MacCaw](https://twitter.
 
 You can configure your age once you picked it in Screen Saver Preferences in System Preferences.
 
+<img src="https://s3.amazonaws.com/f.cl.ly/items/411Y341u3d3X1V2C0p45/Screen%20Recording%202015-08-07%20at%2008.15%20AM.gif" width="396" alt="Motivation Screenshot">
+
+
+## Installation
+
+**[Download the latest release](https://github.com/soffes/Motivation/releases).** Unzip and double-click.
+
 
 ## Building
 
