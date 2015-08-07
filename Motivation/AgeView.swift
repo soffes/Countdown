@@ -78,7 +78,7 @@ class AgeView: ScreenSaverView {
 		return true
 	}
 
-	override func configureSheet() -> NSWindow! {
+	override func configureSheet() -> NSWindow? {
 		return configurationWindowController.window
 	}
 	
@@ -86,7 +86,7 @@ class AgeView: ScreenSaverView {
 	// MARK: - Private
 
 	private func initialize() {
-		setAnimationTimeInterval(1 / 30)
+		animationTimeInterval = 1 / 30
 
 		addSubview(textLabel)
 		addConstraints([

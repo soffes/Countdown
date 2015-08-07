@@ -30,9 +30,7 @@ class Preferences: NSObject {
 	}
 
 	private let defaults: ScreenSaverDefaults? = {
-		if let bundleIdentifier = NSBundle(forClass: Preferences.self).bundleIdentifier {
-			return ScreenSaverDefaults.defaultsForModuleWithName(bundleIdentifier) as? ScreenSaverDefaults
-		}
-		return nil
+		let bundleIdentifier = NSBundle(forClass: Preferences.self).bundleIdentifier
+		return bundleIdentifier.flatMap { ScreenSaverDefaults(forModuleWithName: $0) }
 	}()
 }
