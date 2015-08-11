@@ -56,6 +56,10 @@ class AgeView: ScreenSaverView {
 		initialize()
 	}
 
+	deinit {
+		NSNotificationCenter.defaultCenter().removeObserver(self)
+	}
+	
 
 	// MARK: - NSView
 
