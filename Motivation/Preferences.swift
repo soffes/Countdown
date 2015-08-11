@@ -13,6 +13,8 @@ class Preferences: NSObject {
 
 	// MARK: - Properties
 
+	static var birthdayDidChangeNotificationName = "Preferences.birthdayDidChangeNotificationName"
+
 	var birthday: NSDate? {
 		get {
 			let timestamp = defaults?.objectForKey("Birthday") as? NSTimeInterval
@@ -26,6 +28,8 @@ class Preferences: NSObject {
 				defaults?.removeObjectForKey("Birthday")
 			}
 			defaults?.synchronize()
+
+			NSNotificationCenter.defaultCenter().postNotificationName(self.dynamicType.birthdayDidChangeNotificationName, object: newValue)
 		}
 	}
 

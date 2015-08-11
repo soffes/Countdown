@@ -29,6 +29,12 @@ class AgeView: ScreenSaverView {
 		return ConfigurationWindowController()
 	}()
 
+	private var birthday: NSDate? {
+		didSet {
+			updateFont()
+		}
+	}
+
 
 	// MARK: - Initializers
 
@@ -54,19 +60,19 @@ class AgeView: ScreenSaverView {
 
 		backgroundColor.setFill()
 		NSBezierPath.fillRect(bounds)
+	}
 
-		if Preferences().birthday != nil {
-			textLabel.font = .systemFontOfSize(bounds.width / 10)
-		} else {
-			textLabel.font = .systemFontOfSize(bounds.width / 30)
-		}
+	// If the screen saver changes size, update the font
+	override func resizeWithOldSuperviewSize(oldSize: NSSize) {
+		super.resizeWithOldSuperviewSize(oldSize)
+		updateFont()
 	}
 
 
 	// MARK: - ScreenSaverView
 
 	override func animateOneFrame() {
-		if let birthday = Preferences().birthday {
+		if let birthday = birthday {
 			let age = birthday.timeIntervalSinceNow * -1 / 60 / 60 / 24 / 365
 			textLabel.stringValue = String(NSString(format: "%0.9f", age))
 		} else {
@@ -87,11 +93,53 @@ class AgeView: ScreenSaverView {
 
 	private func initialize() {
 		animationTimeInterval = 1 / 30
+		birthday = Preferences().birthday
 
 		addSubview(textLabel)
 		addConstraints([
 			NSLayoutConstraint(item: textLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0),
 			NSLayoutConstraint(item: textLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
 		])
+
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "birthdayDidChange:", name: Preferences.birthdayDidChangeNotificationName, object: nil)
+	}
+
+	@objc private func birthdayDidChange(notification: NSNotification?) {
+		birthday = notification?.object as? NSDate
+	}
+
+	/// Update the font for the current size
+	private func updateFont() {
+		if birthday != nil {
+			textLabel.font = fontWithSize(bounds.width / 10)
+		} else {
+			textLabel.font = fontWithSize(bounds.width / 30)
+		}
+	}
+
+	/// Get a monospaced font
+	private func fontWithSize(fontSize: CGFloat, monospace: Bool = true) -> NSFont {
+		let font: NSFont
+		if #available(OSX 10.11, *) {
+			font = NSFont.systemFontOfSize(fontSize, weight: NSFontWeightThin)
+		} else {
+			font = NSFont(name: "HelveticaNeue-Thin", size: fontSize)!
+		}
+
+		let fontDescriptor: NSFontDescriptor
+		if monospace {
+			fontDescriptor = font.fontDescriptor.fontDescriptorByAddingAttributes([
+				NSFontFeatureSettingsAttribute: [
+					[
+						NSFontFeatureTypeIdentifierKey: kNumberSpacingType,
+						NSFontFeatureSelectorIdentifierKey: kMonospacedNumbersSelector
+					]
+				]
+			])
+		} else {
+			fontDescriptor = font.fontDescriptor
+		}
+
+		return NSFont(descriptor: fontDescriptor, size: fontSize)!
 	}
 }
