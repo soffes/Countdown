@@ -12,8 +12,25 @@ class ConfigurationWindowController: NSWindowController {
 
 	// MARK: - Properties
 
+	@IBOutlet weak var lightRadio: NSButton!
+	@IBOutlet weak var moderateRadio: NSButton!
+	@IBOutlet weak var terrifyingRadio: NSButton!
+
 	override var windowNibName: String {
 		return "Configuration"
+	}
+
+
+	// MARK: - NSWindowController
+
+	override func windowDidLoad() {
+		super.windowDidLoad()
+
+		switch Preferences().motivationLevel {
+		case .Light: lightRadio.state = NSOnState
+		case .Moderate: moderateRadio.state = NSOnState
+		case .Terrifying: terrifyingRadio.state = NSOnState
+		}
 	}
 
 

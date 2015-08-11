@@ -7,6 +7,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ConfigurationWindowController" customModule="Motivation" customModuleProvider="target">
             <connections>
+                <outlet property="lightRadio" destination="SYp-OG-PUb" id="QAx-UK-2Qi"/>
+                <outlet property="moderateRadio" destination="pTh-rE-L1F" id="Okf-GD-efx"/>
+                <outlet property="terrifyingRadio" destination="daF-cg-qud" id="Qzr-li-xhu"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="yFe-qJ-2Tx"/>
             </connections>
         </customObject>
@@ -83,7 +86,7 @@ DQ
                     </button>
                     <button tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="daF-cg-qud">
                         <rect key="frame" x="137" y="60" width="78" height="18"/>
-                        <buttonCell key="cell" type="radio" title="Terrifying" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="6uM-dm-epD">
+                        <buttonCell key="cell" type="radio" title="Terrifying" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="6uM-dm-epD">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
