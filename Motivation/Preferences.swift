@@ -9,11 +9,24 @@
 import Foundation
 import ScreenSaver
 
+enum MotivationLevel: UInt {
+	case Light, Moderate, Terrifying
+
+	var decimalPlaces: UInt {
+		switch self {
+		case Light: return 7
+		case Moderate: return 8
+		case Terrifying: return 9
+		}
+	}
+}
+
 class Preferences: NSObject {
 
 	// MARK: - Properties
 
-	static var birthdayDidChangeNotificationName = "Preferences.birthdayDidChangeNotificationName"
+	static var birthdayDidChangeNotificationName = "Preferences.birthdayDidChangeNotification"
+	static var motivationLevelDidChangeNotificationName = "Preferences.motivationLevelDidChangeNotification"
 
 	var birthday: NSDate? {
 		get {
@@ -30,6 +43,20 @@ class Preferences: NSObject {
 			defaults?.synchronize()
 
 			NSNotificationCenter.defaultCenter().postNotificationName(self.dynamicType.birthdayDidChangeNotificationName, object: newValue)
+		}
+	}
+
+	var motivationLevel: MotivationLevel {
+		get {
+			let uint = defaults?.objectForKey("MotivationLevel") as? UInt
+			return uint.flatMap { MotivationLevel(rawValue: $0) } ?? .Terrifying
+		}
+
+		set {
+			defaults?.setObject(newValue.rawValue, forKey: "MotivationLevel")
+			defaults?.synchronize()
+
+			NSNotificationCenter.defaultCenter().postNotificationName(self.dynamicType.motivationLevelDidChangeNotificationName, object: newValue.rawValue)
 		}
 	}
 

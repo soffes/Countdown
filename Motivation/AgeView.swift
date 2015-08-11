@@ -29,6 +29,8 @@ class AgeView: ScreenSaverView {
 		return ConfigurationWindowController()
 	}()
 
+	private var motivationLevel: MotivationLevel!
+
 	private var birthday: NSDate? {
 		didSet {
 			updateFont()
@@ -74,7 +76,8 @@ class AgeView: ScreenSaverView {
 	override func animateOneFrame() {
 		if let birthday = birthday {
 			let age = birthday.timeIntervalSinceNow * -1 / 60 / 60 / 24 / 365
-			textLabel.stringValue = String(NSString(format: "%0.9f", age))
+			let format = "%0.\(motivationLevel.decimalPlaces)f"
+			textLabel.stringValue = String(NSString(format: format, age))
 		} else {
 			textLabel.stringValue = "Open Screen Saver Options to set your birthday."
 		}
@@ -93,7 +96,10 @@ class AgeView: ScreenSaverView {
 
 	private func initialize() {
 		animationTimeInterval = 1 / 30
-		birthday = Preferences().birthday
+
+		let preferences = Preferences()
+		motivationLevel = preferences.motivationLevel
+		birthday = preferences.birthday
 
 		addSubview(textLabel)
 		addConstraints([
@@ -101,11 +107,16 @@ class AgeView: ScreenSaverView {
 			NSLayoutConstraint(item: textLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
 		])
 
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "motivationLevelDidChange:", name: Preferences.motivationLevelDidChangeNotificationName, object: nil)
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "birthdayDidChange:", name: Preferences.birthdayDidChangeNotificationName, object: nil)
 	}
 
+	@objc private func motivationLevelDidChange(notification: NSNotification?) {
+		motivationLevel = Preferences().motivationLevel
+	}
+
 	@objc private func birthdayDidChange(notification: NSNotification?) {
-		birthday = notification?.object as? NSDate
+		birthday = Preferences().birthday
 	}
 
 	/// Update the font for the current size

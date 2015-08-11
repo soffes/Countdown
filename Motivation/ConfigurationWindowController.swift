@@ -24,4 +24,9 @@ class ConfigurationWindowController: NSWindowController {
 			window.sheetParent?.endSheet(window)
 		}
 	}
+
+	@IBAction func levelDidChange(sender: AnyObject?) {
+		guard let button = sender as? NSButton, level = MotivationLevel(rawValue: UInt(button.tag)) else { return }
+		Preferences().motivationLevel = level
+	}
 }
