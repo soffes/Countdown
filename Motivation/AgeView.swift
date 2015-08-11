@@ -13,7 +13,7 @@ class AgeView: ScreenSaverView {
 
 	// MARK: - Properties
 
-	let textLabel: NSTextField = {
+	private let textLabel: NSTextField = {
 		let label = NSTextField()
 		label.translatesAutoresizingMaskIntoConstraints = false
 		label.editable = false
@@ -25,11 +25,11 @@ class AgeView: ScreenSaverView {
 		return label
 	}()
 
-	lazy var configurationWindowController: NSWindowController = {
+	private lazy var configurationWindowController: NSWindowController = {
 		return ConfigurationWindowController()
 	}()
 
-	private var motivationLevel: MotivationLevel!
+	private var motivationLevel: MotivationLevel
 
 	private var birthday: NSDate? {
 		didSet {
@@ -45,11 +45,13 @@ class AgeView: ScreenSaverView {
 	}
 
 	override init!(frame: NSRect, isPreview: Bool) {
+		motivationLevel = Preferences().motivationLevel
 		super.init(frame: frame, isPreview: isPreview)
 		initialize()
 	}
 
 	required init?(coder: NSCoder) {
+		motivationLevel = Preferences().motivationLevel
 		super.init(coder: coder)
 		initialize()
 	}
@@ -94,27 +96,32 @@ class AgeView: ScreenSaverView {
 
 	// MARK: - Private
 
+	/// Shared initializer
 	private func initialize() {
+		// Set animation time interval
 		animationTimeInterval = 1 / 30
 
-		let preferences = Preferences()
-		motivationLevel = preferences.motivationLevel
-		birthday = preferences.birthday
+		// Recall preferences
+		birthday = Preferences().birthday
 
+		// Setup the label
 		addSubview(textLabel)
 		addConstraints([
 			NSLayoutConstraint(item: textLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0),
 			NSLayoutConstraint(item: textLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
 		])
 
+		// Listen for configuration changes
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "motivationLevelDidChange:", name: Preferences.motivationLevelDidChangeNotificationName, object: nil)
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "birthdayDidChange:", name: Preferences.birthdayDidChangeNotificationName, object: nil)
 	}
 
+	/// Motiviation level changed
 	@objc private func motivationLevelDidChange(notification: NSNotification?) {
 		motivationLevel = Preferences().motivationLevel
 	}
 
+	/// Birthday changed
 	@objc private func birthdayDidChange(notification: NSNotification?) {
 		birthday = Preferences().birthday
 	}
@@ -124,15 +131,15 @@ class AgeView: ScreenSaverView {
 		if birthday != nil {
 			textLabel.font = fontWithSize(bounds.width / 10)
 		} else {
-			textLabel.font = fontWithSize(bounds.width / 30)
+			textLabel.font = fontWithSize(bounds.width / 30, monospace: false)
 		}
 	}
 
-	/// Get a monospaced font
+	/// Get a font
 	private func fontWithSize(fontSize: CGFloat, monospace: Bool = true) -> NSFont {
 		let font: NSFont
 		if #available(OSX 10.11, *) {
-			font = NSFont.systemFontOfSize(fontSize, weight: NSFontWeightThin)
+			font = .systemFontOfSize(fontSize, weight: NSFontWeightThin)
 		} else {
 			font = NSFont(name: "HelveticaNeue-Thin", size: fontSize)!
 		}
