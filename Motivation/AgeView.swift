@@ -81,9 +81,9 @@ class AgeView: ScreenSaverView {
 
 	override func animateOneFrame() {
 		if let birthday = birthday {
-			let age = birthday.timeIntervalSinceNow * -1 / 60 / 60 / 24 / 365
+			let age = ageForBirthday(birthday)
 			let format = "%0.\(motivationLevel.decimalPlaces)f"
-			textLabel.stringValue = String(NSString(format: format, age))
+			textLabel.stringValue = String(format: format, age)
 		} else {
 			textLabel.stringValue = "Open Screen Saver Options to set your birthday."
 		}
@@ -118,6 +118,35 @@ class AgeView: ScreenSaverView {
 		// Listen for configuration changes
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "motivationLevelDidChange:", name: Preferences.motivationLevelDidChangeNotificationName, object: nil)
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "birthdayDidChange:", name: Preferences.birthdayDidChangeNotificationName, object: nil)
+	}
+
+	/// Age calculation
+	private func ageForBirthday(birthday: NSDate) -> Double {
+		let calendar = NSCalendar.currentCalendar()
+		let now = NSDate()
+
+		// An age is defined as the number of years you've been alive plus the number of days, seconds, and nanoseconds
+		// you've been alive out of that many units in the current year.
+		let components = calendar.components([NSCalendarUnit.Year, NSCalendarUnit.Day, NSCalendarUnit.Second, NSCalendarUnit.Nanosecond], fromDate: birthday, toDate: now, options: [])
+
+		// We calculate these every time since the values can change when you cross a boundary. Things are too
+		// complicated to try to figure out when that is and cache them. NSCalendar is made for this.
+		let daysInYear = Double(calendar.daysInYear(now) ?? 365)
+		let hoursInDay = Double(calendar.rangeOfUnit(NSCalendarUnit.Hour, inUnit: NSCalendarUnit.Day, forDate: now).length)
+		let minutesInHour = Double(calendar.rangeOfUnit(NSCalendarUnit.Minute, inUnit: NSCalendarUnit.Hour, forDate: now).length)
+		let secondsInMinute = Double(calendar.rangeOfUnit(NSCalendarUnit.Second, inUnit: NSCalendarUnit.Minute, forDate: now).length)
+		let nanosecondsInSecond = Double(calendar.rangeOfUnit(NSCalendarUnit.Nanosecond, inUnit: NSCalendarUnit.Second, forDate: now).length)
+
+		// Now that we have all of the values, assembling them is easy. We don't get minutes and hours from the calendar
+		// since it will overflow nicely to seconds. We need days and years since the number of days in a year changes
+		// more frequently. This will handle leap seconds, days, and years.
+		let seconds = Double(components.second) + (Double(components.nanosecond) / nanosecondsInSecond)
+		let minutes = seconds / secondsInMinute
+		let hours = minutes / minutesInHour
+		let days = Double(components.day) + (hours / hoursInDay)
+		let years = Double(components.year) + (days / daysInYear)
+
+		return years
 	}
 
 	/// Motiviation level changed
