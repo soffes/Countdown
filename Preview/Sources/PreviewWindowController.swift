@@ -1,6 +1,6 @@
 //
 //  PreviewWindowController.swift
-//  Motivation
+//  Preview
 //
 //  Created by Sam Soffes on 8/6/15.
 //  Copyright (c) 2015 Sam Soffes. All rights reserved.
@@ -12,7 +12,7 @@ class PreviewWindowController: NSWindowController {
 
 	// MARK: - Properties
 
-	let screenSaver = AgeView()
+	let screenSaver = CountdownView()
 
 
 	// MARK: - NSWindowController

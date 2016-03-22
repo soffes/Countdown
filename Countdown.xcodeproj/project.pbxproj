@@ -7,36 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		211437161B7DD4FB002AC9FA /* NSCalendar+Motivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211437151B7DD4FB002AC9FA /* NSCalendar+Motivation.swift */; };
-		211437171B7DD504002AC9FA /* NSCalendar+Motivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211437151B7DD4FB002AC9FA /* NSCalendar+Motivation.swift */; };
-		217CFEE61B7484CC002794CF /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEE51B7484CC002794CF /* ConfigurationWindowController.swift */; };
-		217CFEE71B7484CC002794CF /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEE51B7484CC002794CF /* ConfigurationWindowController.swift */; };
-		217CFEE91B7484ED002794CF /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217CFEE81B7484ED002794CF /* Configuration.xib */; };
-		217CFEEA1B7484ED002794CF /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217CFEE81B7484ED002794CF /* Configuration.xib */; };
-		217CFEEC1B748573002794CF /* PreviewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEEB1B748573002794CF /* PreviewWindowController.swift */; };
-		217CFEEE1B7486EB002794CF /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEED1B7486EB002794CF /* Preferences.swift */; };
-		217CFEEF1B7486EE002794CF /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CFEED1B7486EB002794CF /* Preferences.swift */; };
-		21F222351B73B5CD00B9A11A /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F222341B73B5CD00B9A11A /* AgeView.swift */; };
-		21F2223F1B73B60100B9A11A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F2223E1B73B60100B9A11A /* AppDelegate.swift */; };
-		21F222431B73B60100B9A11A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F222421B73B60100B9A11A /* Images.xcassets */; };
-		21F222461B73B60100B9A11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F222441B73B60100B9A11A /* Main.storyboard */; };
-		21F2225B1B73B64300B9A11A /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F222341B73B5CD00B9A11A /* AgeView.swift */; };
+		212EA5EF1CA10D430049BD16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5E21CA10D430049BD16 /* Info.plist */; };
+		212EA5F01CA10D430049BD16 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E41CA10D430049BD16 /* CountdownView.swift */; };
+		212EA5F11CA10D430049BD16 /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E51CA10D430049BD16 /* ConfigurationWindowController.swift */; };
+		212EA5F31CA10D430049BD16 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E71CA10D430049BD16 /* Preferences.swift */; };
+		212EA5F41CA10D430049BD16 /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5E91CA10D430049BD16 /* Configuration.xib */; };
+		212EA5F71CA10D540049BD16 /* PreviewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5DD1CA10D430049BD16 /* PreviewWindowController.swift */; };
+		212EA5F81CA10D5F0049BD16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5DF1CA10D430049BD16 /* Main.storyboard */; };
+		212EA5FA1CA10DAE0049BD16 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E41CA10D430049BD16 /* CountdownView.swift */; };
+		212EA5FB1CA10DAE0049BD16 /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E51CA10D430049BD16 /* ConfigurationWindowController.swift */; };
+		212EA5FD1CA10DAE0049BD16 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E71CA10D430049BD16 /* Preferences.swift */; };
+		212EA5FF1CA10F370049BD16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5FE1CA10F370049BD16 /* AppDelegate.swift */; };
+		212EA6001CA10FDB0049BD16 /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5E91CA10D430049BD16 /* Configuration.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		211437151B7DD4FB002AC9FA /* NSCalendar+Motivation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendar+Motivation.swift"; sourceTree = "<group>"; };
-		217CFEE51B7484CC002794CF /* ConfigurationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationWindowController.swift; sourceTree = "<group>"; };
-		217CFEE81B7484ED002794CF /* Configuration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Configuration.xib; sourceTree = "<group>"; };
-		217CFEEB1B748573002794CF /* PreviewWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewWindowController.swift; sourceTree = "<group>"; };
-		217CFEED1B7486EB002794CF /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
-		21F222261B73B5AC00B9A11A /* Motivation.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Motivation.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		21F2222A1B73B5AC00B9A11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21F222341B73B5CD00B9A11A /* AgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
+		212EA5DD1CA10D430049BD16 /* PreviewWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewWindowController.swift; sourceTree = "<group>"; };
+		212EA5E01CA10D430049BD16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		212EA5E21CA10D430049BD16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		212EA5E41CA10D430049BD16 /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		212EA5E51CA10D430049BD16 /* ConfigurationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationWindowController.swift; sourceTree = "<group>"; };
+		212EA5E71CA10D430049BD16 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		212EA5E91CA10D430049BD16 /* Configuration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Configuration.xib; sourceTree = "<group>"; };
+		212EA5EA1CA10D430049BD16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		212EA5FE1CA10F370049BD16 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21F222261B73B5AC00B9A11A /* Countdown.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Countdown.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F2223A1B73B60100B9A11A /* Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preview.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21F2223D1B73B60100B9A11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21F2223E1B73B60100B9A11A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21F222421B73B60100B9A11A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		21F222451B73B60100B9A11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +53,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		212EA5DA1CA10D430049BD16 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				212EA5DB1CA10D430049BD16 /* Sources */,
+				212EA5DE1CA10D430049BD16 /* Support */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		212EA5DB1CA10D430049BD16 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				212EA5FE1CA10F370049BD16 /* AppDelegate.swift */,
+				212EA5DD1CA10D430049BD16 /* PreviewWindowController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		212EA5DE1CA10D430049BD16 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				212EA5DF1CA10D430049BD16 /* Main.storyboard */,
+				212EA5E21CA10D430049BD16 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		212EA5E31CA10D430049BD16 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				212EA5E41CA10D430049BD16 /* CountdownView.swift */,
+				212EA5E51CA10D430049BD16 /* ConfigurationWindowController.swift */,
+				212EA5E71CA10D430049BD16 /* Preferences.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		212EA5E81CA10D430049BD16 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				212EA5E91CA10D430049BD16 /* Configuration.xib */,
+				212EA5EA1CA10D430049BD16 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		21F2221C1B73B5AC00B9A11A = {
 			isa = PBXGroup;
 			children = (
-				21F222281B73B5AC00B9A11A /* Motivation */,
-				21F2223B1B73B60100B9A11A /* Preview */,
+				212EA5E31CA10D430049BD16 /* Sources */,
+				212EA5E81CA10D430049BD16 /* Support */,
+				212EA5DA1CA10D430049BD16 /* Preview */,
 				21F222271B73B5AC00B9A11A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,51 +112,10 @@
 		21F222271B73B5AC00B9A11A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21F222261B73B5AC00B9A11A /* Motivation.saver */,
+				21F222261B73B5AC00B9A11A /* Countdown.saver */,
 				21F2223A1B73B60100B9A11A /* Preview.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		21F222281B73B5AC00B9A11A /* Motivation */ = {
-			isa = PBXGroup;
-			children = (
-				21F222341B73B5CD00B9A11A /* AgeView.swift */,
-				217CFEE51B7484CC002794CF /* ConfigurationWindowController.swift */,
-				217CFEED1B7486EB002794CF /* Preferences.swift */,
-				211437151B7DD4FB002AC9FA /* NSCalendar+Motivation.swift */,
-				217CFEE81B7484ED002794CF /* Configuration.xib */,
-				21F222291B73B5AC00B9A11A /* Supporting Files */,
-			);
-			path = Motivation;
-			sourceTree = "<group>";
-		};
-		21F222291B73B5AC00B9A11A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				21F2222A1B73B5AC00B9A11A /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		21F2223B1B73B60100B9A11A /* Preview */ = {
-			isa = PBXGroup;
-			children = (
-				21F2223E1B73B60100B9A11A /* AppDelegate.swift */,
-				217CFEEB1B748573002794CF /* PreviewWindowController.swift */,
-				21F222421B73B60100B9A11A /* Images.xcassets */,
-				21F222441B73B60100B9A11A /* Main.storyboard */,
-				21F2223C1B73B60100B9A11A /* Supporting Files */,
-			);
-			path = Preview;
-			sourceTree = "<group>";
-		};
-		21F2223C1B73B60100B9A11A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				21F2223D1B73B60100B9A11A /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +131,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		21F222251B73B5AC00B9A11A /* Motivation */ = {
+		21F222251B73B5AC00B9A11A /* Countdown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21F222311B73B5AC00B9A11A /* Build configuration list for PBXNativeTarget "Motivation" */;
+			buildConfigurationList = 21F222311B73B5AC00B9A11A /* Build configuration list for PBXNativeTarget "Countdown" */;
 			buildPhases = (
 				21F222211B73B5AC00B9A11A /* Sources */,
 				21F222221B73B5AC00B9A11A /* Frameworks */,
@@ -142,9 +144,9 @@
 			);
 			dependencies = (
 			);
-			name = Motivation;
+			name = Countdown;
 			productName = Motivation;
-			productReference = 21F222261B73B5AC00B9A11A /* Motivation.saver */;
+			productReference = 21F222261B73B5AC00B9A11A /* Countdown.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
 		21F222391B73B60100B9A11A /* Preview */ = {
@@ -182,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 21F222201B73B5AC00B9A11A /* Build configuration list for PBXProject "Motivation" */;
+			buildConfigurationList = 21F222201B73B5AC00B9A11A /* Build configuration list for PBXProject "Countdown" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -195,7 +197,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21F222251B73B5AC00B9A11A /* Motivation */,
+				21F222251B73B5AC00B9A11A /* Countdown */,
 				21F222391B73B60100B9A11A /* Preview */,
 			);
 		};
@@ -206,7 +208,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				217CFEE91B7484ED002794CF /* Configuration.xib in Resources */,
+				212EA5F41CA10D430049BD16 /* Configuration.xib in Resources */,
+				212EA5EF1CA10D430049BD16 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,9 +217,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F222431B73B60100B9A11A /* Images.xcassets in Resources */,
-				217CFEEA1B7484ED002794CF /* Configuration.xib in Resources */,
-				21F222461B73B60100B9A11A /* Main.storyboard in Resources */,
+				212EA6001CA10FDB0049BD16 /* Configuration.xib in Resources */,
+				212EA5F81CA10D5F0049BD16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,10 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				217CFEE61B7484CC002794CF /* ConfigurationWindowController.swift in Sources */,
-				21F222351B73B5CD00B9A11A /* AgeView.swift in Sources */,
-				211437161B7DD4FB002AC9FA /* NSCalendar+Motivation.swift in Sources */,
-				217CFEEE1B7486EB002794CF /* Preferences.swift in Sources */,
+				212EA5F31CA10D430049BD16 /* Preferences.swift in Sources */,
+				212EA5F11CA10D430049BD16 /* ConfigurationWindowController.swift in Sources */,
+				212EA5F01CA10D430049BD16 /* CountdownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,22 +239,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F2223F1B73B60100B9A11A /* AppDelegate.swift in Sources */,
-				217CFEEC1B748573002794CF /* PreviewWindowController.swift in Sources */,
-				211437171B7DD504002AC9FA /* NSCalendar+Motivation.swift in Sources */,
-				217CFEEF1B7486EE002794CF /* Preferences.swift in Sources */,
-				217CFEE71B7484CC002794CF /* ConfigurationWindowController.swift in Sources */,
-				21F2225B1B73B64300B9A11A /* AgeView.swift in Sources */,
+				212EA5FB1CA10DAE0049BD16 /* ConfigurationWindowController.swift in Sources */,
+				212EA5FA1CA10DAE0049BD16 /* CountdownView.swift in Sources */,
+				212EA5FD1CA10DAE0049BD16 /* Preferences.swift in Sources */,
+				212EA5FF1CA10F370049BD16 /* AppDelegate.swift in Sources */,
+				212EA5F71CA10D540049BD16 /* PreviewWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		21F222441B73B60100B9A11A /* Main.storyboard */ = {
+		212EA5DF1CA10D430049BD16 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				21F222451B73B60100B9A11A /* Base */,
+				212EA5E01CA10D430049BD16 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -280,7 +280,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -324,7 +323,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -348,11 +346,11 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = Motivation/Info.plist;
+				INFOPLIST_FILE = Support/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.motiviation;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.countdown;
+				PRODUCT_NAME = Countdown;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = saver;
 			};
@@ -365,11 +363,11 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = Motivation/Info.plist;
+				INFOPLIST_FILE = Support/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.motiviation;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.countdown;
+				PRODUCT_NAME = Countdown;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
@@ -384,9 +382,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Preview/Info.plist;
+				INFOPLIST_FILE = Preview/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.samsoffes.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samsoffes.countdown-preview";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -398,9 +396,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Preview/Info.plist;
+				INFOPLIST_FILE = Preview/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.samsoffes.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samsoffes.countdown-preview";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -408,7 +406,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		21F222201B73B5AC00B9A11A /* Build configuration list for PBXProject "Motivation" */ = {
+		21F222201B73B5AC00B9A11A /* Build configuration list for PBXProject "Countdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21F2222F1B73B5AC00B9A11A /* Debug */,
@@ -417,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21F222311B73B5AC00B9A11A /* Build configuration list for PBXNativeTarget "Motivation" */ = {
+		21F222311B73B5AC00B9A11A /* Build configuration list for PBXNativeTarget "Countdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21F222321B73B5AC00B9A11A /* Debug */,
