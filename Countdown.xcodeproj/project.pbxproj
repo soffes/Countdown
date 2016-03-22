@@ -21,6 +21,8 @@
 		212EA6001CA10FDB0049BD16 /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5E91CA10D430049BD16 /* Configuration.xib */; };
 		212EA6021CA110920049BD16 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA6011CA110920049BD16 /* Label.swift */; };
 		212EA6041CA110F80049BD16 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA6031CA110F80049BD16 /* PlaceView.swift */; };
+		212EA6051CA118970049BD16 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA6011CA110920049BD16 /* Label.swift */; };
+		212EA6061CA118970049BD16 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA6031CA110F80049BD16 /* PlaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -237,6 +239,8 @@
 			files = (
 				212EA5F31CA10D430049BD16 /* Preferences.swift in Sources */,
 				212EA5F11CA10D430049BD16 /* ConfigurationWindowController.swift in Sources */,
+				212EA6061CA118970049BD16 /* PlaceView.swift in Sources */,
+				212EA6051CA118970049BD16 /* Label.swift in Sources */,
 				212EA5F01CA10D430049BD16 /* CountdownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

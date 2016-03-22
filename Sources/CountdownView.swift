@@ -17,6 +17,8 @@ class CountdownView: ScreenSaverView {
 		let view = Label()
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.stringValue = "Open Screen Saver Options to set your date."
+		view.textColor = .whiteColor()
+		view.hidden = true
 		return view
 	}()
 
@@ -51,6 +53,7 @@ class CountdownView: ScreenSaverView {
 	private let placesView: NSStackView = {
 		let view = NSStackView()
 		view.translatesAutoresizingMaskIntoConstraints = false
+		view.hidden = true
 		return view
 	}()
 
@@ -114,10 +117,10 @@ class CountdownView: ScreenSaverView {
 		let now = NSDate()
 		let components = NSCalendar.currentCalendar().components(units, fromDate: now, toDate: date, options: [])
 
-		daysView.textLabel.stringValue = String(format: "%02d", components.day)
-		hoursView.textLabel.stringValue = String(format: "%02d", components.hour)
-		minutesView.textLabel.stringValue = String(format: "%02d", components.minute)
-		secondsView.textLabel.stringValue = String(format: "%02d", components.second)
+		daysView.textLabel.stringValue = String(format: "%02d", abs(components.day))
+		hoursView.textLabel.stringValue = String(format: "%02d", abs(components.hour))
+		minutesView.textLabel.stringValue = String(format: "%02d", abs(components.minute))
+		secondsView.textLabel.stringValue = String(format: "%02d", abs(components.second))
 	}
 
 	override func hasConfigureSheet() -> Bool {
@@ -148,6 +151,8 @@ class CountdownView: ScreenSaverView {
 		placesView.addArrangedSubview(secondsView)
 		addSubview(placesView)
 
+		updateFonts()
+
 		addConstraints([
 			placeholderLabel.centerXAnchor.constraintEqualToAnchor(centerXAnchor),
 			placeholderLabel.centerYAnchor.constraintEqualToAnchor(centerYAnchor),
@@ -172,13 +177,13 @@ class CountdownView: ScreenSaverView {
 
 	/// Update the font for the current size
 	private func updateFonts() {
-		placesView.spacing = max(32, round(bounds.width * 0.05))
+		placesView.spacing = floor(bounds.width * 0.05)
 
-		placeholderLabel.font = fontWithSize(round(bounds.width / 30), monospace: false)
+		placeholderLabel.font = fontWithSize(floor(bounds.width / 30), monospace: false)
 
 		let places = [daysView, hoursView, minutesView, secondsView]
 		let textFont = fontWithSize(round(bounds.width / 8), weight: NSFontWeightUltraLight)
-		let detailTextFont = fontWithSize(round(bounds.width / 38), weight: NSFontWeightThin)
+		let detailTextFont = fontWithSize(floor(bounds.width / 38), weight: NSFontWeightThin)
 
 		for place in places {
 			place.textLabel.font = textFont
@@ -204,6 +209,6 @@ class CountdownView: ScreenSaverView {
 			fontDescriptor = font.fontDescriptor
 		}
 
-		return NSFont(descriptor: fontDescriptor, size: fontSize)!
+		return NSFont(descriptor: fontDescriptor, size: max(4, fontSize))!
 	}
 }

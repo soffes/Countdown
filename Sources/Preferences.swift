@@ -14,7 +14,7 @@ class Preferences: NSObject {
 	// MARK: - Properties
 
 	static let dateDidChangeNotificationName = "Preferences.dateDidChangeNotification"
-	private static let dateKey = "Date"
+	private static let dateKey = "Date2"
 
 	var date: NSDate? {
 		get {

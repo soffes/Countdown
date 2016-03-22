@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.2.1</string>
+	<string>0.1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -23,6 +23,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2015 Sam Soffes. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>Motivation.AgeView</string>
+	<string>Countdown.CountdownView</string>
 </dict>
 </plist>
