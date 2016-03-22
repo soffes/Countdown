@@ -13,16 +13,45 @@ class CountdownView: ScreenSaverView {
 
 	// MARK: - Properties
 
-	private let textLabel: NSTextField = {
-		let label = NSTextField()
-		label.translatesAutoresizingMaskIntoConstraints = false
-		label.editable = false
-		label.drawsBackground = false
-		label.bordered = false
-		label.bezeled = false
-		label.selectable = false
-		label.textColor = .whiteColor()
-		return label
+	private let placeholderLabel: Label = {
+		let view = Label()
+		view.translatesAutoresizingMaskIntoConstraints = false
+		view.stringValue = "Open Screen Saver Options to set your date."
+		return view
+	}()
+
+	private let daysView: PlaceView = {
+		let view = PlaceView()
+		view.translatesAutoresizingMaskIntoConstraints = false
+		view.detailTextLabel.stringValue = "DAYS"
+		return view
+	}()
+
+	private let hoursView: PlaceView = {
+		let view = PlaceView()
+		view.translatesAutoresizingMaskIntoConstraints = false
+		view.detailTextLabel.stringValue = "HOURS"
+		return view
+	}()
+
+	private let minutesView: PlaceView = {
+		let view = PlaceView()
+		view.translatesAutoresizingMaskIntoConstraints = false
+		view.detailTextLabel.stringValue = "MINUTES"
+		return view
+	}()
+
+	private let secondsView: PlaceView = {
+		let view = PlaceView()
+		view.translatesAutoresizingMaskIntoConstraints = false
+		view.detailTextLabel.stringValue = "SECONDS"
+		return view
+	}()
+
+	private let placesView: NSStackView = {
+		let view = NSStackView()
+		view.translatesAutoresizingMaskIntoConstraints = false
+		return view
 	}()
 
 	private lazy var configurationWindowController: NSWindowController = {
@@ -31,7 +60,7 @@ class CountdownView: ScreenSaverView {
 
 	private var date: NSDate? {
 		didSet {
-			updateFont()
+			updateFonts()
 		}
 	}
 
@@ -69,20 +98,26 @@ class CountdownView: ScreenSaverView {
 	// If the screen saver changes size, update the font
 	override func resizeWithOldSuperviewSize(oldSize: NSSize) {
 		super.resizeWithOldSuperviewSize(oldSize)
-		updateFont()
+		updateFonts()
 	}
 
 
 	// MARK: - ScreenSaverView
 
 	override func animateOneFrame() {
-		if let date = date {
-			let age = ageFordate(date)
-			let format = "%f"
-			textLabel.stringValue = String(format: format, age)
-		} else {
-			textLabel.stringValue = "Open Screen Saver Options to set your date."
-		}
+		placeholderLabel.hidden = date != nil
+		placesView.hidden = !placeholderLabel.hidden
+
+		guard let date = date else { return }
+
+		let units: NSCalendarUnit = [.Day, .Hour, .Minute, .Second]
+		let now = NSDate()
+		let components = NSCalendar.currentCalendar().components(units, fromDate: now, toDate: date, options: [])
+
+		daysView.textLabel.stringValue = String(format: "%02d", components.day)
+		hoursView.textLabel.stringValue = String(format: "%02d", components.hour)
+		minutesView.textLabel.stringValue = String(format: "%02d", components.minute)
+		secondsView.textLabel.stringValue = String(format: "%02d", components.second)
 	}
 
 	override func hasConfigureSheet() -> Bool {
@@ -104,11 +139,21 @@ class CountdownView: ScreenSaverView {
 		// Recall preferences
 		date = Preferences().date
 
-		// Setup the label
-		addSubview(textLabel)
+		// Setup the views
+		addSubview(placeholderLabel)
+
+		placesView.addArrangedSubview(daysView)
+		placesView.addArrangedSubview(hoursView)
+		placesView.addArrangedSubview(minutesView)
+		placesView.addArrangedSubview(secondsView)
+		addSubview(placesView)
+
 		addConstraints([
-			NSLayoutConstraint(item: textLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0),
-			NSLayoutConstraint(item: textLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0)
+			placeholderLabel.centerXAnchor.constraintEqualToAnchor(centerXAnchor),
+			placeholderLabel.centerYAnchor.constraintEqualToAnchor(centerYAnchor),
+
+			placesView.centerXAnchor.constraintEqualToAnchor(centerXAnchor),
+			placesView.centerYAnchor.constraintEqualToAnchor(centerYAnchor)
 		])
 
 		// Listen for configuration changes
@@ -126,22 +171,24 @@ class CountdownView: ScreenSaverView {
 	}
 
 	/// Update the font for the current size
-	private func updateFont() {
-		if date != nil {
-			textLabel.font = fontWithSize(bounds.width / 10)
-		} else {
-			textLabel.font = fontWithSize(bounds.width / 30, monospace: false)
+	private func updateFonts() {
+		placesView.spacing = max(32, round(bounds.width * 0.05))
+
+		placeholderLabel.font = fontWithSize(round(bounds.width / 30), monospace: false)
+
+		let places = [daysView, hoursView, minutesView, secondsView]
+		let textFont = fontWithSize(round(bounds.width / 8), weight: NSFontWeightUltraLight)
+		let detailTextFont = fontWithSize(round(bounds.width / 38), weight: NSFontWeightThin)
+
+		for place in places {
+			place.textLabel.font = textFont
+			place.detailTextLabel.font = detailTextFont
 		}
 	}
 
 	/// Get a font
-	private func fontWithSize(fontSize: CGFloat, monospace: Bool = true) -> NSFont {
-		let font: NSFont
-		if #available(OSX 10.11, *) {
-			font = .systemFontOfSize(fontSize, weight: NSFontWeightThin)
-		} else {
-			font = NSFont(name: "HelveticaNeue-Thin", size: fontSize)!
-		}
+	private func fontWithSize(fontSize: CGFloat, weight: CGFloat = NSFontWeightThin, monospace: Bool = true) -> NSFont {
+		let font = NSFont.systemFontOfSize(fontSize, weight: weight)
 
 		let fontDescriptor: NSFontDescriptor
 		if monospace {

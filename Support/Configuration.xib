@@ -15,10 +15,10 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="194" height="96"/>
+            <rect key="contentRect" x="196" y="240" width="266" height="96"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="194" height="96"/>
+                <rect key="frame" x="0.0" y="0.0" width="266" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cf0-hz-k84">
@@ -30,7 +30,7 @@
                         </textFieldCell>
                     </textField>
                     <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="24i-HD-fhj">
-                        <rect key="frame" x="66" y="53" width="111" height="27"/>
+                        <rect key="frame" x="66" y="53" width="183" height="27"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="6zn-zD-imf">
                             <font key="font" metaFont="system"/>
                             <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
@@ -39,13 +39,14 @@
                             </calendarDate>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES" second="YES"/>
                         </datePickerCell>
                         <connections>
                             <binding destination="zet-Ww-APq" name="value" keyPath="self.date" id="RPz-gh-DPM"/>
                         </connections>
                     </datePicker>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nsQ-3M-79j">
-                        <rect key="frame" x="121" y="13" width="59" height="32"/>
+                        <rect key="frame" x="193" y="13" width="59" height="32"/>
                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JAB-GH-sNP">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -70,7 +71,7 @@ DQ
                     <constraint firstAttribute="trailing" secondItem="24i-HD-fhj" secondAttribute="trailing" constant="20" id="fho-pn-Oac"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="371" y="211"/>
+            <point key="canvasLocation" x="407" y="211"/>
         </window>
         <customObject id="zet-Ww-APq" customClass="Preferences" customModule="Countdown" customModuleProvider="target"/>
     </objects>
