@@ -4,6 +4,8 @@ Coundown is a Mac OS X screen saver forked from [Motivation](https://github.com/
 
 You can configure the date once you picked it in Screen Saver Preferences in System Preferences.
 
+[![Countdown Screen Saver](Support/countdown.gif)](https://github.com/soffes/Countdown/releases)
+
 
 ## Installation
 
