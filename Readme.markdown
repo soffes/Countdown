@@ -16,3 +16,7 @@ If you see a message saying this screen saver doesn't work with this version of 
 ## Building
 
 Xcode 7.3 is required to build Countdown since it's written in Swift 2.2.
+
+## License
+
+[MIT License](https://github.com/soffes/Countdown/blob/master/LICENSE)
