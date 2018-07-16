@@ -4,7 +4,7 @@ Coundown is a Mac OS X screen saver forked from [Motivation](https://github.com/
 
 You can configure the date once you picked it in Screen Saver Preferences in System Preferences.
 
-[![Countdown Screen Saver](Support/countdown.gif)](https://github.com/soffes/Countdown/releases)
+[![Countdown Screen Saver](Countdown.gif)](https://github.com/soffes/Countdown/releases)
 
 
 ## Installation
@@ -15,4 +15,4 @@ If you see a message saying this screen saver doesn't work with this version of 
 
 ## Building
 
-Xcode 7.3 is required to build Countdown since it's written in Swift 2.2.
+Xcode 10 is required to build Countdown since it's written in Swift 4.2.

@@ -1,15 +1,7 @@
-//
-//  CountdownView.swift
-//  Countdown
-//
-//  Created by Sam Soffes on 8/6/15.
-//  Copyright (c) 2015 Sam Soffes. All rights reserved.
-//
-
 import Foundation
 import ScreenSaver
 
-class CountdownView: ScreenSaverView {
+final class CountdownView: ScreenSaverView {
 
 	// MARK: - Properties
 
@@ -17,8 +9,8 @@ class CountdownView: ScreenSaverView {
 		let view = Label()
 		view.translatesAutoresizingMaskIntoConstraints = false
 		view.stringValue = "Open Screen Saver Options to set your date."
-		view.textColor = .whiteColor()
-		view.hidden = true
+		view.textColor = .white
+		view.isHidden = true
 		return view
 	}()
 
@@ -53,7 +45,7 @@ class CountdownView: ScreenSaverView {
 	private let placesView: NSStackView = {
 		let view = NSStackView()
 		view.translatesAutoresizingMaskIntoConstraints = false
-		view.hidden = true
+		view.isHidden = true
 		return view
 	}()
 
@@ -61,7 +53,7 @@ class CountdownView: ScreenSaverView {
 		return ConfigurationWindowController()
 	}()
 
-	private var date: NSDate? {
+	private var date: Date? {
 		didSet {
 			updateFonts()
 		}
@@ -71,7 +63,7 @@ class CountdownView: ScreenSaverView {
 	// MARK: - Initializers
 
 	convenience init() {
-		self.init(frame: CGRectZero, isPreview: false)
+		self.init(frame: .zero, isPreview: false)
 	}
 
 	override init!(frame: NSRect, isPreview: Bool) {
@@ -85,52 +77,53 @@ class CountdownView: ScreenSaverView {
 	}
 
 	deinit {
-		NSNotificationCenter.defaultCenter().removeObserver(self)
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 
 	// MARK: - NSView
 
-	override func drawRect(rect: NSRect) {
-		let backgroundColor: NSColor = .blackColor()
-
-		backgroundColor.setFill()
-		NSBezierPath.fillRect(bounds)
+	override func draw(_ rect: NSRect) {
+		NSColor.black.setFill()
+		NSBezierPath.fill(bounds)
 	}
 
 	// If the screen saver changes size, update the font
-	override func resizeWithOldSuperviewSize(oldSize: NSSize) {
-		super.resizeWithOldSuperviewSize(oldSize)
+    override func resize(withOldSuperviewSize oldSize: NSSize) {
+        super.resize(withOldSuperviewSize: oldSize)
 		updateFonts()
 	}
+
+    override func viewDidMoveToSuperview() {
+        super.viewDidMoveToSuperview()
+        updateFonts()
+    }
 
 
 	// MARK: - ScreenSaverView
 
 	override func animateOneFrame() {
-		placeholderLabel.hidden = date != nil
-		placesView.hidden = !placeholderLabel.hidden
+		placeholderLabel.isHidden = date != nil
+		placesView.isHidden = !placeholderLabel.isHidden
 
 		guard let date = date else { return }
 
-		let units: NSCalendarUnit = [.Day, .Hour, .Minute, .Second]
-		let now = NSDate()
-		let components = NSCalendar.currentCalendar().components(units, fromDate: now, toDate: date, options: [])
+		let components = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: Date(), to: date)
 
-		daysView.textLabel.stringValue = String(format: "%02d", abs(components.day))
-		hoursView.textLabel.stringValue = String(format: "%02d", abs(components.hour))
-		minutesView.textLabel.stringValue = String(format: "%02d", abs(components.minute))
-		secondsView.textLabel.stringValue = String(format: "%02d", abs(components.second))
+		daysView.textLabel.stringValue = components.day.flatMap { String(format: "%02d", abs($0)) } ?? ""
+        hoursView.textLabel.stringValue = components.hour.flatMap { String(format: "%02d", abs($0)) } ?? ""
+        minutesView.textLabel.stringValue = components.minute.flatMap { String(format: "%02d", abs($0)) } ?? ""
+        secondsView.textLabel.stringValue = components.second.flatMap { String(format: "%02d", abs($0)) } ?? ""
 	}
 
-	override func hasConfigureSheet() -> Bool {
-		return true
-	}
+    override var hasConfigureSheet: Bool {
+        return true
+    }
 
-	override func configureSheet() -> NSWindow? {
-		return configurationWindowController.window
-	}
-	
+    override var configureSheet: NSWindow? {
+        return configurationWindowController.window
+    }
+
 
 	// MARK: - Private
 
@@ -154,24 +147,19 @@ class CountdownView: ScreenSaverView {
 		updateFonts()
 
 		addConstraints([
-			placeholderLabel.centerXAnchor.constraintEqualToAnchor(centerXAnchor),
-			placeholderLabel.centerYAnchor.constraintEqualToAnchor(centerYAnchor),
+            placeholderLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+			placeholderLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
 
-			placesView.centerXAnchor.constraintEqualToAnchor(centerXAnchor),
-			placesView.centerYAnchor.constraintEqualToAnchor(centerYAnchor)
+			placesView.centerXAnchor.constraint(equalTo: centerXAnchor),
+			placesView.centerYAnchor.constraint(equalTo: centerYAnchor)
 		])
 
 		// Listen for configuration changes
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(dateDidChange), name: Preferences.dateDidChangeNotificationName, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(dateDidChange), name: .dateDidChange, object: nil)
 	}
 
-	/// Age calculation
-	private func ageFordate(date: NSDate) -> Double {
-		return 0
-	}
-
-	/// date changed
-	@objc private func dateDidChange(notification: NSNotification?) {
+	/// Date changed
+	@objc private func dateDidChange(_ notification: NSNotification?) {
 		date = Preferences().date
 	}
 
@@ -179,11 +167,11 @@ class CountdownView: ScreenSaverView {
 	private func updateFonts() {
 		placesView.spacing = floor(bounds.width * 0.05)
 
-		placeholderLabel.font = fontWithSize(floor(bounds.width / 30), monospace: false)
+        placeholderLabel.font = font(withSize: floor(bounds.width / 30), isMonospace: false)
 
 		let places = [daysView, hoursView, minutesView, secondsView]
-		let textFont = fontWithSize(round(bounds.width / 8), weight: NSFontWeightUltraLight)
-		let detailTextFont = fontWithSize(floor(bounds.width / 38), weight: NSFontWeightThin)
+        let textFont = font(withSize: round(bounds.width / 8), weight: .ultraLight)
+        let detailTextFont = font(withSize: floor(bounds.width / 38))
 
 		for place in places {
 			place.textLabel.font = textFont
@@ -192,16 +180,16 @@ class CountdownView: ScreenSaverView {
 	}
 
 	/// Get a font
-	private func fontWithSize(fontSize: CGFloat, weight: CGFloat = NSFontWeightThin, monospace: Bool = true) -> NSFont {
-		let font = NSFont.systemFontOfSize(fontSize, weight: weight)
+    private func font(withSize fontSize: CGFloat, weight: NSFont.Weight = .thin, isMonospace monospace: Bool = true) -> NSFont {
+        let font = NSFont.systemFont(ofSize: fontSize, weight: weight)
 
 		let fontDescriptor: NSFontDescriptor
 		if monospace {
-			fontDescriptor = font.fontDescriptor.fontDescriptorByAddingAttributes([
-				NSFontFeatureSettingsAttribute: [
+            fontDescriptor = font.fontDescriptor.addingAttributes([
+                .featureSettings: [
 					[
-						NSFontFeatureTypeIdentifierKey: kNumberSpacingType,
-						NSFontFeatureSelectorIdentifierKey: kMonospacedNumbersSelector
+                        NSFontDescriptor.FeatureKey.typeIdentifier: kNumberSpacingType,
+                        NSFontDescriptor.FeatureKey.selectorIdentifier: kMonospacedNumbersSelector
 					]
 				]
 			])

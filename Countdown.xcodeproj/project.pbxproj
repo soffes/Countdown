@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		212EA5EF1CA10D430049BD16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5E21CA10D430049BD16 /* Info.plist */; };
-		212EA5F01CA10D430049BD16 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E41CA10D430049BD16 /* CountdownView.swift */; };
-		212EA5F11CA10D430049BD16 /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E51CA10D430049BD16 /* ConfigurationWindowController.swift */; };
-		212EA5F31CA10D430049BD16 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E71CA10D430049BD16 /* Preferences.swift */; };
-		212EA5F41CA10D430049BD16 /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5E91CA10D430049BD16 /* Configuration.xib */; };
-		212EA5F71CA10D540049BD16 /* PreviewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5DD1CA10D430049BD16 /* PreviewWindowController.swift */; };
-		212EA5F81CA10D5F0049BD16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5DF1CA10D430049BD16 /* Main.storyboard */; };
-		212EA5FA1CA10DAE0049BD16 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E41CA10D430049BD16 /* CountdownView.swift */; };
-		212EA5FB1CA10DAE0049BD16 /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E51CA10D430049BD16 /* ConfigurationWindowController.swift */; };
-		212EA5FD1CA10DAE0049BD16 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5E71CA10D430049BD16 /* Preferences.swift */; };
-		212EA5FF1CA10F370049BD16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA5FE1CA10F370049BD16 /* AppDelegate.swift */; };
-		212EA6001CA10FDB0049BD16 /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 212EA5E91CA10D430049BD16 /* Configuration.xib */; };
-		212EA6021CA110920049BD16 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA6011CA110920049BD16 /* Label.swift */; };
-		212EA6041CA110F80049BD16 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA6031CA110F80049BD16 /* PlaceView.swift */; };
-		212EA6051CA118970049BD16 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA6011CA110920049BD16 /* Label.swift */; };
-		212EA6061CA118970049BD16 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EA6031CA110F80049BD16 /* PlaceView.swift */; };
+		218D6EE520FC3CEB0029D4A9 /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218D6EDC20FC3CEB0029D4A9 /* Configuration.xib */; };
+		218D6EE720FC3CEB0029D4A9 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE020FC3CEB0029D4A9 /* Label.swift */; };
+		218D6EE820FC3CEB0029D4A9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE120FC3CEB0029D4A9 /* Preferences.swift */; };
+		218D6EE920FC3CEB0029D4A9 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE220FC3CEB0029D4A9 /* CountdownView.swift */; };
+		218D6EEA20FC3CEB0029D4A9 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE320FC3CEB0029D4A9 /* PlaceView.swift */; };
+		218D6EEB20FC3CEB0029D4A9 /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE420FC3CEB0029D4A9 /* ConfigurationWindowController.swift */; };
+		218D6EF520FC3CF00029D4A9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218D6EEE20FC3CF00029D4A9 /* MainMenu.xib */; };
+		218D6EF620FC3CF00029D4A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218D6EF020FC3CF00029D4A9 /* Images.xcassets */; };
+		218D6EF720FC3CF00029D4A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 218D6EF220FC3CF00029D4A9 /* Info.plist */; };
+		218D6EF820FC3CF00029D4A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EF420FC3CF00029D4A9 /* AppDelegate.swift */; };
+		218D6EF920FC3D440029D4A9 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE020FC3CEB0029D4A9 /* Label.swift */; };
+		218D6EFA20FC3D440029D4A9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE120FC3CEB0029D4A9 /* Preferences.swift */; };
+		218D6EFB20FC3D440029D4A9 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE220FC3CEB0029D4A9 /* CountdownView.swift */; };
+		218D6EFC20FC3D440029D4A9 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE320FC3CEB0029D4A9 /* PlaceView.swift */; };
+		218D6EFD20FC3D440029D4A9 /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE420FC3CEB0029D4A9 /* ConfigurationWindowController.swift */; };
+		218D6EFE20FC3D4E0029D4A9 /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218D6EDC20FC3CEB0029D4A9 /* Configuration.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		212EA5DD1CA10D430049BD16 /* PreviewWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewWindowController.swift; sourceTree = "<group>"; };
-		212EA5E01CA10D430049BD16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		212EA5E21CA10D430049BD16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		212EA5E41CA10D430049BD16 /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
-		212EA5E51CA10D430049BD16 /* ConfigurationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationWindowController.swift; sourceTree = "<group>"; };
-		212EA5E71CA10D430049BD16 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
-		212EA5E91CA10D430049BD16 /* Configuration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Configuration.xib; sourceTree = "<group>"; };
-		212EA5EA1CA10D430049BD16 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		212EA5FE1CA10F370049BD16 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		212EA6011CA110920049BD16 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
-		212EA6031CA110F80049BD16 /* PlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		218D6EDC20FC3CEB0029D4A9 /* Configuration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Configuration.xib; sourceTree = "<group>"; };
+		218D6EDE20FC3CEB0029D4A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		218D6EE020FC3CEB0029D4A9 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		218D6EE120FC3CEB0029D4A9 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		218D6EE220FC3CEB0029D4A9 /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		218D6EE320FC3CEB0029D4A9 /* PlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		218D6EE420FC3CEB0029D4A9 /* ConfigurationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationWindowController.swift; sourceTree = "<group>"; };
+		218D6EEF20FC3CF00029D4A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		218D6EF020FC3CF00029D4A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		218D6EF220FC3CF00029D4A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		218D6EF420FC3CF00029D4A9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21F222261B73B5AC00B9A11A /* Countdown.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Countdown.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F2223A1B73B60100B9A11A /* Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -59,60 +59,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		212EA5DA1CA10D430049BD16 /* Preview */ = {
+		218D6EDA20FC3CEB0029D4A9 /* Countdown */ = {
 			isa = PBXGroup;
 			children = (
-				212EA5DB1CA10D430049BD16 /* Sources */,
-				212EA5DE1CA10D430049BD16 /* Support */,
+				218D6EDB20FC3CEB0029D4A9 /* Resources */,
+				218D6EDD20FC3CEB0029D4A9 /* Support */,
+				218D6EDF20FC3CEB0029D4A9 /* Sources */,
+			);
+			path = Countdown;
+			sourceTree = "<group>";
+		};
+		218D6EDB20FC3CEB0029D4A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				218D6EDC20FC3CEB0029D4A9 /* Configuration.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		218D6EDD20FC3CEB0029D4A9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				218D6EDE20FC3CEB0029D4A9 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		218D6EDF20FC3CEB0029D4A9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				218D6EE020FC3CEB0029D4A9 /* Label.swift */,
+				218D6EE120FC3CEB0029D4A9 /* Preferences.swift */,
+				218D6EE220FC3CEB0029D4A9 /* CountdownView.swift */,
+				218D6EE320FC3CEB0029D4A9 /* PlaceView.swift */,
+				218D6EE420FC3CEB0029D4A9 /* ConfigurationWindowController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		218D6EEC20FC3CF00029D4A9 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				218D6EED20FC3CF00029D4A9 /* Resources */,
+				218D6EF120FC3CF00029D4A9 /* Support */,
+				218D6EF320FC3CF00029D4A9 /* Sources */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
 		};
-		212EA5DB1CA10D430049BD16 /* Sources */ = {
+		218D6EED20FC3CF00029D4A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				212EA5FE1CA10F370049BD16 /* AppDelegate.swift */,
-				212EA5DD1CA10D430049BD16 /* PreviewWindowController.swift */,
+				218D6EEE20FC3CF00029D4A9 /* MainMenu.xib */,
+				218D6EF020FC3CF00029D4A9 /* Images.xcassets */,
 			);
-			path = Sources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		212EA5DE1CA10D430049BD16 /* Support */ = {
+		218D6EF120FC3CF00029D4A9 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				212EA5DF1CA10D430049BD16 /* Main.storyboard */,
-				212EA5E21CA10D430049BD16 /* Info.plist */,
+				218D6EF220FC3CF00029D4A9 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
 		};
-		212EA5E31CA10D430049BD16 /* Sources */ = {
+		218D6EF320FC3CF00029D4A9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				212EA5E41CA10D430049BD16 /* CountdownView.swift */,
-				212EA5E51CA10D430049BD16 /* ConfigurationWindowController.swift */,
-				212EA5E71CA10D430049BD16 /* Preferences.swift */,
-				212EA6011CA110920049BD16 /* Label.swift */,
-				212EA6031CA110F80049BD16 /* PlaceView.swift */,
+				218D6EF420FC3CF00029D4A9 /* AppDelegate.swift */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		212EA5E81CA10D430049BD16 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				212EA5E91CA10D430049BD16 /* Configuration.xib */,
-				212EA5EA1CA10D430049BD16 /* Info.plist */,
-			);
-			path = Support;
 			sourceTree = "<group>";
 		};
 		21F2221C1B73B5AC00B9A11A = {
 			isa = PBXGroup;
 			children = (
-				212EA5E31CA10D430049BD16 /* Sources */,
-				212EA5E81CA10D430049BD16 /* Support */,
-				212EA5DA1CA10D430049BD16 /* Preview */,
+				218D6EDA20FC3CEB0029D4A9 /* Countdown */,
+				218D6EEC20FC3CF00029D4A9 /* Preview */,
 				21F222271B73B5AC00B9A11A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -181,11 +205,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Sam Soffes";
 				TargetAttributes = {
 					21F222251B73B5AC00B9A11A = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = UP9C8XM22A;
+						ProvisioningStyle = Automatic;
 					};
 					21F222391B73B60100B9A11A = {
 						CreatedOnToolsVersion = 6.4;
@@ -216,8 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212EA5F41CA10D430049BD16 /* Configuration.xib in Resources */,
-				212EA5EF1CA10D430049BD16 /* Info.plist in Resources */,
+				218D6EE520FC3CEB0029D4A9 /* Configuration.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +250,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212EA6001CA10FDB0049BD16 /* Configuration.xib in Resources */,
-				212EA5F81CA10D5F0049BD16 /* Main.storyboard in Resources */,
+				218D6EF520FC3CF00029D4A9 /* MainMenu.xib in Resources */,
+				218D6EF620FC3CF00029D4A9 /* Images.xcassets in Resources */,
+				218D6EFE20FC3D4E0029D4A9 /* Configuration.xib in Resources */,
+				218D6EF720FC3CF00029D4A9 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,11 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212EA5F31CA10D430049BD16 /* Preferences.swift in Sources */,
-				212EA5F11CA10D430049BD16 /* ConfigurationWindowController.swift in Sources */,
-				212EA6061CA118970049BD16 /* PlaceView.swift in Sources */,
-				212EA6051CA118970049BD16 /* Label.swift in Sources */,
-				212EA5F01CA10D430049BD16 /* CountdownView.swift in Sources */,
+				218D6EE920FC3CEB0029D4A9 /* CountdownView.swift in Sources */,
+				218D6EE820FC3CEB0029D4A9 /* Preferences.swift in Sources */,
+				218D6EEB20FC3CEB0029D4A9 /* ConfigurationWindowController.swift in Sources */,
+				218D6EEA20FC3CEB0029D4A9 /* PlaceView.swift in Sources */,
+				218D6EE720FC3CEB0029D4A9 /* Label.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,25 +276,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212EA5FB1CA10DAE0049BD16 /* ConfigurationWindowController.swift in Sources */,
-				212EA5FA1CA10DAE0049BD16 /* CountdownView.swift in Sources */,
-				212EA6041CA110F80049BD16 /* PlaceView.swift in Sources */,
-				212EA6021CA110920049BD16 /* Label.swift in Sources */,
-				212EA5FD1CA10DAE0049BD16 /* Preferences.swift in Sources */,
-				212EA5FF1CA10F370049BD16 /* AppDelegate.swift in Sources */,
-				212EA5F71CA10D540049BD16 /* PreviewWindowController.swift in Sources */,
+				218D6EFD20FC3D440029D4A9 /* ConfigurationWindowController.swift in Sources */,
+				218D6EF920FC3D440029D4A9 /* Label.swift in Sources */,
+				218D6EF820FC3CF00029D4A9 /* AppDelegate.swift in Sources */,
+				218D6EFC20FC3D440029D4A9 /* PlaceView.swift in Sources */,
+				218D6EFB20FC3D440029D4A9 /* CountdownView.swift in Sources */,
+				218D6EFA20FC3D440029D4A9 /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		212EA5DF1CA10D430049BD16 /* Main.storyboard */ = {
+		218D6EEE20FC3CF00029D4A9 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				212EA5E01CA10D430049BD16 /* Base */,
+				218D6EEF20FC3CF00029D4A9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -281,13 +307,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -313,6 +349,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -324,13 +362,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -348,21 +396,27 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		21F222321B73B5AC00B9A11A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = Support/Info.plist;
+				DEVELOPMENT_TEAM = UP9C8XM22A;
+				INFOPLIST_FILE = "$(SRCROOT)/Countdown/Support/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.countdown;
 				PRODUCT_NAME = Countdown;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = saver;
 			};
@@ -371,15 +425,18 @@
 		21F222331B73B5AC00B9A11A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = Support/Info.plist;
+				DEVELOPMENT_TEAM = UP9C8XM22A;
+				INFOPLIST_FILE = "$(SRCROOT)/Countdown/Support/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.countdown;
 				PRODUCT_NAME = Countdown;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
