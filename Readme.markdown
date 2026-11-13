@@ -15,4 +15,4 @@ If you see a message saying this screen saver doesn't work with this version of 
 
 ## Building
 
-Xcode 10 is required to build Countdown since it's written in Swift 4.2.
+Xcode 27 is required to build Countdown since it's written in Swift 6 with a macOS 13.0 deployment target.

@@ -15,7 +15,6 @@
 		218D6EEB20FC3CEB0029D4A9 /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE420FC3CEB0029D4A9 /* ConfigurationWindowController.swift */; };
 		218D6EF520FC3CF00029D4A9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218D6EEE20FC3CF00029D4A9 /* MainMenu.xib */; };
 		218D6EF620FC3CF00029D4A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218D6EF020FC3CF00029D4A9 /* Images.xcassets */; };
-		218D6EF720FC3CF00029D4A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 218D6EF220FC3CF00029D4A9 /* Info.plist */; };
 		218D6EF820FC3CF00029D4A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EF420FC3CF00029D4A9 /* AppDelegate.swift */; };
 		218D6EF920FC3D440029D4A9 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE020FC3CEB0029D4A9 /* Label.swift */; };
 		218D6EFA20FC3D440029D4A9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D6EE120FC3CEB0029D4A9 /* Preferences.swift */; };
@@ -253,7 +252,6 @@
 				218D6EF520FC3CF00029D4A9 /* MainMenu.xib in Resources */,
 				218D6EF620FC3CF00029D4A9 /* Images.xcassets in Resources */,
 				218D6EFE20FC3D4E0029D4A9 /* Configuration.xib in Resources */,
-				218D6EF720FC3CF00029D4A9 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,12 +343,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -393,12 +390,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -407,16 +403,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UP9C8XM22A;
 				INFOPLIST_FILE = "$(SRCROOT)/Countdown/Support/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.countdown;
 				PRODUCT_NAME = Countdown;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = saver;
 			};
@@ -427,16 +421,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UP9C8XM22A;
 				INFOPLIST_FILE = "$(SRCROOT)/Countdown/Support/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.countdown;
 				PRODUCT_NAME = Countdown;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
