@@ -1,15 +1,15 @@
 import AppKit
 import ScreenSaver
 
-@NSApplicationMain final class AppDelegate: NSObject {
+@main @MainActor final class AppDelegate: NSObject {
 	
 	// MARK: - Properties
 
 	@IBOutlet var window: NSWindow!
 	
-	let view: ScreenSaverView! = {
-		let view = CountdownView(frame: .zero, isPreview: false)
-		view?.autoresizingMask = [.width, .height]
+	let view: CountdownView = {
+		let view = CountdownView(frame: .zero, isPreview: false)!
+		view.autoresizingMask = [.width, .height]
 		return view
 	}()
 
